@@ -121,7 +121,7 @@ foreach ($u in $users) {
         $newUser = New-MgUser -BodyParameter $userBody
         Write-Host "  Step 1 OK - User ID: $($newUser.Id)" -ForegroundColor Gray
 
-        # Step 2: Assign Power BI Pro license
+        # Step 2: Assign Microsoft license
         Write-Host "  Step 2: Assigning license..." -ForegroundColor Gray
         $licenseBody = @{
             addLicenses    = @(@{ skuId = $pbiSkuId })
